@@ -1,7 +1,5 @@
 <template>
   <div>
-    <Navbar />
-    <NuxtPage />
+    {{ $route.params.group }}
   </div>
 </template>
-
