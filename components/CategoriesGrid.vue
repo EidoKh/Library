@@ -45,7 +45,7 @@
         >
           <img
             class="
-              w-full
+              h-full
               rounded
               block
               max-w-full

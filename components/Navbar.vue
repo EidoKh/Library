@@ -19,7 +19,7 @@
             <nuxt-link
               class="transition duration-500 hover:text-indigo-500"
               to="/"
-              >GARBAGE</nuxt-link
+              >المكتبة</nuxt-link
             >
           </div>
         </div>
@@ -39,31 +39,6 @@
           >
             <nuxt-link :to="link.url">{{ link.name }}</nuxt-link>
           </div>
-
-          <!-- <a
-            href="#whyus"
-            class="
-              mx-4
-              text-lg
-              border-b-2 border-transparent
-              hover:border-b-2 hover:border-indigo-300
-              transition
-              duration-500
-            "
-            >Why Us ?</a
-          >
-          <a
-            href="#showcase"
-            class="
-              mx-4
-              text-lg
-              border-b-2 border-transparent
-              hover:border-b-2 hover:border-indigo-300
-              transition
-              duration-500
-            "
-            >Our Products</a
-          > -->
         </div>
         <!-- Burger Nav Button on Mobile -->
         <div @click="isOpen = !isOpen" id="nav-open" class="p-4 md:hidden">
@@ -116,8 +91,8 @@
 <script setup>
 let isOpen = ref(false);
 const links = reactive([
-  { name: "Home", url: "/" },
-  { name: "About", url: "/about" },
-  { name: "Blog", url: "/blog" },
+  { name: "العربية", url: "/arabic" },
+  { name: "الإنكليزية", url: "/english" },
+  { name: "المؤلفين", url: "/authors" },
 ]);
 </script>

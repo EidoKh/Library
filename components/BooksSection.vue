@@ -2,7 +2,7 @@
   <div class="my-12">
     <div>
       <h1 id="all-category" class="text-right text-5xl text-gray-600 my-4">
-        الكتب الأكثر إعجابا
+        {{ section_title }}
       </h1>
     </div>
     <div class="grid grid-cols-5 gap-4 my-2">
@@ -35,7 +35,7 @@
               "
               >-30% Sale</span
             > -->
-            <h1 class="mt-4 text-3xl font-bold hover:underline cursor-pointer">
+            <h1 class="mt-4 text-lg font-bold hover:underline cursor-pointer">
               {{ book.title }}
             </h1>
             <p class="mt-2 font-sans text-gray-700">{{ book.author }}</p>
@@ -61,6 +61,9 @@ export default {
   props: {
     books: {
       type: Array,
+    },
+    section_title: {
+      type: String,
     },
   },
 };
