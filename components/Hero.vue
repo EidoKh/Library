@@ -1,7 +1,7 @@
 <template>
   <header
     id="up"
-    class="bg-center bg-fixed bg-no-repeat bg-center bg-cover h-screen relative"
+    class="bg-fixed bg-no-repeat bg-center bg-cover h-screen relative"
   >
     <!-- Overlay Background + Center Control -->
     <div
@@ -12,7 +12,7 @@
         <h1
           class="text-gray-100 font-extrabold text-4xl xs:text-5xl md:text-6xl"
         >
-          <span class="text-white">Right</span> Place To
+          تصفح أروع الكتب
         </h1>
         <h2
           class="
@@ -22,10 +22,10 @@
             xs:text-4xl
             md:text-5xl
             leading-tight
+            mt-2
           "
         >
-          Get a <span class="text-white">Better</span> and
-          <span class="text-white">Professionals</span> Design
+          ستجد كل ما ترغب به هنا في مكتبتنا
         </h2>
         <div class="inline-flex">
           <button

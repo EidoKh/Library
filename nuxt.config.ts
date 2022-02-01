@@ -7,7 +7,7 @@ export default defineNuxtConfig({
       postcssOptions: {
         plugins: {
           tailwindcss: {},
-          autoprefixer: {},
+          autoprefixer: {}
         },
       },
     },
@@ -15,5 +15,7 @@ export default defineNuxtConfig({
   css: [
     "~/assets/css/tailwind.css"
   ],
+  buildModules: ["@nuxtjs/google-fonts"],
+          
 
 })
