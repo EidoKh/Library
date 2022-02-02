@@ -18,6 +18,7 @@
         >
           <img
             class="
+              h-full
               w-full
               rounded
               block
@@ -52,6 +53,7 @@
   </div>
 </template>
 <script>
+import { config } from "../config";
 export default {
   props: {
     categories: {
@@ -59,8 +61,8 @@ export default {
     },
   },
   setup() {
-    // const response = await $fetch("http://127.0.0.1:8000/api/random-categories");
-    // let categories = response.data;
+    let APP_URL = config.APP_URL;
+    return { APP_URL };
   },
 };
 </script>

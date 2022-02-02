@@ -91,8 +91,9 @@
 <script setup>
 let isOpen = ref(false);
 const links = reactive([
-  { name: "العربية", url: "/arabic" },
-  { name: "الإنكليزية", url: "/english" },
+  { name: "العربية", url: "/books/arabic" },
+  { name: "الإنكليزية", url: "/books/english" },
+  { name: "كوردي", url: "/books/kurdish" },
   { name: "المؤلفين", url: "/authors" },
 ]);
 </script>

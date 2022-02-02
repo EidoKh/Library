@@ -82,6 +82,7 @@
 const response = await $fetch("http://127.0.0.1:8000/api/all-categories");
 const categories = response.data;
 </script>
+
 <style>
 #all-categories {
   font-family: "Lucida Console", "Courier New", monospace;

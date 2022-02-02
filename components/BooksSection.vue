@@ -43,9 +43,7 @@
           <div class="relative">
             <img
               class="w-full h-96"
-              :src="
-                'http://127.0.0.1:8000/images/books_images/' + book.book_image
-              "
+              :src="APP_URL + '/images/books_images/' + book.book_image"
             />
           </div>
         </div>
@@ -57,6 +55,7 @@
   </div>
 </template>
 <script>
+import { config } from "../config";
 export default {
   props: {
     books: {
@@ -65,6 +64,10 @@ export default {
     section_title: {
       type: String,
     },
+  },
+  setup() {
+    let APP_URL = config.APP_URL;
+    return { APP_URL };
   },
 };
 </script>

@@ -1,6 +1,6 @@
 <template>
   <!-- component -->
-  <page-hero :xy="temp" />
+  <page-hero component_title="جميع الفئات" />
   <div class="container mx-auto px-6 mt-12">
     <div>
       <div>
