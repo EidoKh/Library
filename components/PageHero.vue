@@ -20,7 +20,7 @@
           <h1
             class="text-2xl font-semibold text-white uppercase lg:text-3xl mb-4"
           >
-            جميع الفئات{{ xy }}
+            {{ component_title }}
           </h1>
           <!--  -->
           <!-- component -->
@@ -38,6 +38,7 @@
             <div class="w-full">
               <input
                 type="search"
+                @change="$emit('setSearch', $event.target)"
                 class="
                   w-full
                   px-4
@@ -92,6 +93,20 @@
     </div>
   </header>
 </template>
-<script setup>
+<script>
+import { ref } from "vue";
+export default {
+  emits: ["setSearch"],
+  props: {
+    component_title: {
+      type: String,
+    },
+  },
+  setup() {
+    let search = ref("");
+
+    return { search };
+  },
+};
 let search = "";
 </script>

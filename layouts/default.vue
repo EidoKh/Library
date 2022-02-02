@@ -1,7 +1,9 @@
 <template>
   <div lang="ar" dir="rtl">
     <Navbar />
-    <slot></slot>
+    <div>
+      <slot></slot>
+    </div>
     <app-footer />
   </div>
 </template>
