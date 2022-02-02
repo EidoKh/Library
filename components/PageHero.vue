@@ -38,7 +38,8 @@
             <div class="w-full">
               <input
                 type="search"
-                @change="$emit('setSearch', $event.target)"
+                @input="$emit('set_search', search)"
+                v-model="search"
                 class="
                   w-full
                   px-4
@@ -96,7 +97,7 @@
 <script>
 import { ref } from "vue";
 export default {
-  emits: ["setSearch"],
+  emits: ["set_search"],
   props: {
     component_title: {
       type: String,

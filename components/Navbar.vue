@@ -94,6 +94,6 @@ const links = reactive([
   { name: "العربية", url: "/books/arabic" },
   { name: "الإنكليزية", url: "/books/english" },
   { name: "كوردي", url: "/books/kurdish" },
-  { name: "المؤلفين", url: "/authors" },
+  { name: "الفئات", url: "/categories" },
 ]);
 </script>

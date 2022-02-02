@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <!-- <div>
     <page-hero
-      @setSearch="setValuetoSearch($event)"
+      @set_search="setValueToSearch($event)"
       :component_title="
         $route.params.lang === 'english' ? 'الكتب ألأنكليزية' : 'الكتب العربية'
       "
@@ -16,10 +16,8 @@
           }}
         </h1>
       </div>
-      <div class="grid grid-cols-5 gap-4 my-2">
-        <!--1------------------------------>
-        <div v-for="book in books" :key="book">
-          <!-- <div class=" bg-gray-100 flex items-center justify-center"> -->
+      <div class="grid grid-cols-5 gap-4 my-2"> 
+        <div v-for="book in books" :key="book"> 
           <div
             class="
               bg-white
@@ -44,12 +42,12 @@
                 :src="APP_URL + '/images/books_images/' + book.book_image"
               />
             </div>
-          </div>
-          <!-- </div> -->
+          </div> 
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
+  <div>hello</div>
 </template>
 
 <script setup >
@@ -59,24 +57,25 @@ const route = useRoute();
 let books = ref([]);
 let APP_URL = config.APP_URL;
 onMounted(() => {
-  getBooks();
+  getBooks("");
+  console.log("mounted");
 });
 watch(
   () => route.params.lang,
-  () => {
-    getBooks();
+  (lang, prevLang) => {
+    getBooks("");
   }
 );
-async function getBooks() {
-  let res = await useFetch(`/api/books?lang=${route.params.lang}`);
-  books.value = res.data.value.data;
+async function getBooks(keyword = "") {
+  let res = await useFetch(
+    `/api/books?lang=${route.params.lang}&search=${keyword}`
+  );
+  books.value = await res.data.value.data;
+  console.log("keyword: ", books.value);
 }
 
-async function getResults() {
-  getBooks();
-}
-function setValuetoSearch(vario) {
-  console.log(vario);
+function setValueToSearch(word) {
+  getBooks(word);
 }
 </script>
 <style>
